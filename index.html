@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Success 8 - Ôn tập Cuối kỳ 2 | Unit 10, 11, 12 & Review 4 | Thầy Võ Ngọc Tùng</title>
+  <meta name="description" content="Web ôn tập Tiếng Anh Cuối kỳ 2 lớp 8 Global Success: Unit 10 (Ecotourism), Unit 11 (Science & Technology), Unit 12 (Life on Other Planets) & Review 4. Từ vựng, ngữ pháp, quiz 70 câu." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Cuối kỳ 2 - Xanh lá (Ecotourism) → Tím (Science) → Xanh dương (Space) */
+    .hero-gradient-8 {
+      background: linear-gradient(135deg, #065f46 0%, #0891b2 30%, #6d28d9 65%, #1e3a5f 100%);
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #10b981 0%, #6d28d9 50%, #3b82f6 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(6, 95, 70, 0.7);
+      }
+
+      70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(6, 95, 70, 0);
+      }
+
+      100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(6, 95, 70, 0);
+      }
+    }
+
+    .pulse-btn {
+      animation: pulse-ring 2s infinite;
+    }
+
+    /* Custom scrollbar for modal */
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c7c7c7;
+      border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8;
+    }
+  </style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
+</body>
+
+</html>
