@@ -117,7 +117,7 @@ const App: React.FC = () => {
                   <div className="space-y-3 text-white/90 font-medium text-sm">
                     <div className="flex items-center p-2 bg-white/10 rounded-lg"><TreePine className="w-4 h-4 mr-3 text-emerald-300" /> Present Perfect</div>
                     <div className="flex items-center p-2 bg-white/10 rounded-lg"><Cpu className="w-4 h-4 mr-3 text-sky-300" /> Passive Voice</div>
-                    <div className="flex items-center p-2 bg-white/10 rounded-lg"><Globe className="w-4 h-4 mr-3 text-yellow-300" /> Relative Clauses</div>
+                    <div className="flex items-center p-2 bg-white/10 rounded-lg"><Globe className="w-4 h-4 mr-3 text-yellow-300" /> Conditional Type 2</div>
                     <div className="flex items-center p-2 bg-white/10 rounded-lg"><Stars className="w-4 h-4 mr-3 text-purple-300" /> Conditional Sentences</div>
                   </div>
                 </div>

@@ -1,13 +1,19 @@
-# Global Success 8 - Ôn tập Giữa kỳ 2
+# Global Success 8 - Ôn tập Cuối kỳ 2
 
-Web app ôn tập Tiếng Anh 8 Global Success - Giữa kỳ 2 (Unit 7, 8, 9 & Review 3).
+Web app ôn tập Tiếng Anh 8 Global Success - Cuối kỳ 2 (Unit 10, 11, 12 & Review 4).
 
 ## Nội dung
 
-- **Unit 7:** Environmental Protection (Bảo vệ Môi trường)
-- **Unit 8:** Shopping (Mua sắm)
-- **Unit 9:** Natural Disasters (Thiên tai)
-- **Review 3:** Ôn tập tổng hợp
+- **Unit 10:** Ecotourism – Du lịch sinh thái | Ngữ pháp: Present Perfect | Ngữ âm: /ɪ/ & /iː/
+- **Unit 11:** Science & Technology – Khoa học & Công nghệ | Ngữ pháp: Passive Voice | Word Stress
+- **Unit 12:** Life on Other Planets – Cuộc sống trên các hành tinh | Ngữ pháp: Conditional Type 2 | Intonation
+- **Review 4:** Ôn tập tổng hợp Unit 10–12
+
+## Tính năng
+
+- 📚 11 bài học chi tiết (từ vựng, ngữ pháp, ngữ âm)
+- 📝 Quiz 70 câu trắc nghiệm có giải thích chi tiết
+- 🎨 Giao diện hiện đại, responsive
 
 ## Chạy dự án
 
@@ -18,4 +24,4 @@ npm run dev
 
 ## Deploy
 
-GitHub: <https://github.com/wp37/ktgk2-ta8>
+GitHub: <https://github.com/wp37/review-endterm8>
