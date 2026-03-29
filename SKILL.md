@@ -142,7 +142,7 @@ const unit1Exercises: ExerciseItem[] = [
   options: ["Đáp án A", "Đáp án B", "Đáp án C", "Đáp án D"], 
   correct: 0,  // index của đáp án đúng (0=A, 1=B, 2=C, 3=D)
   explanation: "Giải thích bằng tiếng Việt đơn giản.", 
-  unit: 1  // số Unit (dùng 0 cho Review 3, 99 cho Review 4)
+  unit: 7  // số Unit: 7-12 | 98=Review 3 | 99=Review 4
 },
 ```
 
@@ -183,16 +183,18 @@ Mỗi Unit gồm 3 card:
 | 11 | Travelling in the Future | Future Simple (will) | /sp/ /spl/ |
 | 12 | Robots | Can/Can't, Relative Clauses (who/which) | /sk/ /skr/ |
 
-### Lớp 8 - Học kỳ 2 (Unit 7-12) ← ĐIỀU CHỈNH THEO CT
+### Lớp 8 - Học kỳ 2 (Unit 7-12) ✅ ĐÃ XÁC NHẬN VỚI SGK
 
 | Unit | Chủ đề | Ngữ pháp chính | Ngữ âm |
 |------|--------|----------------|--------|
-| 7 | Pollution | Modal verbs (must/have to) | /ɒ/ vs /ɔː/ |
-| 8 | Disasters | Past Simple vs Past Continuous | Consonant clusters |
-| 9 | Natural Wonders | Relative Clauses (who/which/that) | Stress in sentences |
-| 10 | Ecotourism | Present Perfect | /ɪ/ vs /iː/ |
-| 11 | Science & Technology | Passive Voice | Word stress |
-| 12 | Life on Mars | Future Perfect / Conditionals | Intonation |
+| 7 | **Environmental Protection** (Bảo vệ môi trường) | Past Continuous (while/when) | Phụ âm đầu ghép /bl/ /cl/ /st/ /sp/ |
+| 8 | **Shopping** (Mua sắm) | Present Simple for Future, Adverbs of Frequency | Phụ âm đầu ghép /tr/ /gr/ /pr/ /cr/ |
+| 9 | **Natural Disasters** (Thảm họa thiên nhiên) | Adverbial Clauses of Time (when/while/before/after/as soon as/until) | Phụ âm cuối ghép /nd/ /nt/ /st/ /sk/ |
+| 10 | **Ecotourism** (Du lịch sinh thái) | Present Perfect (have/has + V3) | /ɪ/ vs /iː/ |
+| 11 | **Science & Technology** (Khoa học & Công nghệ) | Passive Voice (be + V3) | Word stress |
+| 12 | **Life on Other Planets** (Sống trên hành tinh khác) | Conditional Type 2 (If + past, would + V) | Intonation |
+| Review 3 | **Tổng hợp Unit 7-9** | Mixed: Past Continuous + HT Đơn cho lịch trình + Time Clauses | — |
+| Review 4 | **Tổng hợp Unit 10-12** | Mixed: Present Perfect + Passive + Conditional Type 2 | — |
 
 ### Lớp 9 - Học kỳ 2 (Unit 7-12) ← ĐIỀU CHỈNH THEO CT
 
@@ -218,7 +220,9 @@ npm run build
 
 ## ⚠️ Lưu ý kỹ thuật khi dùng AI viết data.tsx
 
-> **Vấn đề phát sinh:** `data.tsx` rất dài (vocab + exercises + quiz + lessons cho 3 Unit + 1 Review). Nếu viết một lần, AI sẽ vượt giới hạn token (~16384 tokens) và bị lỗi.
+> **Vấn đề phát sinh:** `data.tsx` rất dài (vocab + exercises + quiz + lessons cho 6 Unit + 2 Review). Nếu viết một lần, AI sẽ vượt giới hạn token (~16384 tokens) và bị lỗi.
+
+> **⚠️ CẢNH BÁO NGUỒN DỮ LIỆU:** Các file quiz shorttest (ví dụ `quiz-unit7-traffic.html`) có thể là bài kiểm tra **cùng tên Unit nhưng khác lớp**. Luôn kiểm tra dòng `Global Success [LỚP]` trong `<meta description>` hoặc tiêu đề file trước khi dùng. File `quiz-grade8-midterm2.html` (Kiểm tra 15 phút lần 3) mới là nguồn **chính xác cho lớp 8 Unit 7-9 & Review 3**.
 
 ### Giải pháp: Chia thành nhiều bước nhỏ
 
@@ -264,15 +268,23 @@ git push
    "<strong>Nghĩa chính</strong>.<br/><em class='text-xs text-gray-500'>Giải thích thêm.</em>"
    ```
 
-3. **Icon colors theo chuẩn:**
-   - Unit 7: `from-blue-600 to-cyan-500`
-   - Unit 8: `from-rose-500 to-pink-500`
-   - Unit 9: `from-amber-500 to-orange-500`
-   - Unit 10: `from-green-600 to-emerald-500`
-   - Unit 11: `from-sky-500 to-blue-500`
-   - Unit 12: `from-slate-600 to-gray-500`
-   - Review 3: `from-violet-500 to-purple-600`
-   - Review 4: `from-rose-500 to-pink-600`
+3. **Icon colors theo chuẩn (Lớp 8 HK2):**
+   - Unit 7 (Môi trường):  `from-green-500 to-lime-500` | `from-lime-500 to-teal-500` | `from-teal-500 to-green-600`
+   - Unit 8 (Shopping):    `from-amber-500 to-orange-500` | `from-orange-400 to-red-500`
+   - Unit 9 (Disasters):   `from-blue-500 to-cyan-600` | `from-cyan-500 to-sky-600`
+   - Review 3:             `from-violet-500 to-purple-600` | `from-purple-500 to-violet-600`
+   - Unit 10 (Ecotourism): `from-green-600 to-emerald-500`
+   - Unit 11 (Science):    `from-sky-500 to-blue-500`
+   - Unit 12 (Planets):    `from-indigo-500 to-violet-500`
+   - Review 4:             `from-rose-500 to-pink-600`
+
+4. **unitColors & unitLabels trong App.tsx:**
+   ```tsx
+   const unitColors = { 7: 'bg-lime-100 text-lime-700', 8: 'bg-amber-100 text-amber-700',
+     9: 'bg-cyan-100 text-cyan-700', 98: 'bg-violet-100 text-violet-700',
+     10: 'bg-green-100 text-green-700', 11: 'bg-sky-100 text-sky-700',
+     12: 'bg-indigo-100 text-indigo-700', 99: 'bg-rose-100 text-rose-700' };
+   ```
 
 ---
 

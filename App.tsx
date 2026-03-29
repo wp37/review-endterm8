@@ -47,6 +47,10 @@ const App: React.FC = () => {
   const activeLesson = activeLessonId !== null ? lessons.find(l => l.id === activeLessonId) : null;
 
   const unitColors: Record<number, string> = {
+    7:  'bg-lime-100 text-lime-700',
+    8:  'bg-amber-100 text-amber-700',
+    9:  'bg-cyan-100 text-cyan-700',
+    98: 'bg-violet-100 text-violet-700',
     10: 'bg-green-100 text-green-700',
     11: 'bg-sky-100 text-sky-700',
     12: 'bg-indigo-100 text-indigo-700',
@@ -54,6 +58,10 @@ const App: React.FC = () => {
   };
 
   const unitLabels: Record<number, string> = {
+    7:  'Unit 7',
+    8:  'Unit 8',
+    9:  'Unit 9',
+    98: 'Review 3',
     10: 'Unit 10',
     11: 'Unit 11',
     12: 'Unit 12',
@@ -78,11 +86,11 @@ const App: React.FC = () => {
                 Ôn tập Kiểm tra Cuối kỳ 2 – Lớp 8
               </div>
               <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight drop-shadow-md tracking-tight">
-                Unit 10, 11, 12 <br />
-                <span className="text-emerald-300">& Review 4</span>
+                Unit 7 → 12 <br />
+                <span className="text-emerald-300">& Review 3, 4</span>
               </h1>
               <p className="text-xl text-white/90 mb-8 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
-                Hệ thống ôn tập toàn diện: Du lịch sinh thái, Khoa học & Công nghệ, Cuộc sống trên các hành tinh khác. Ngữ pháp: Hiện tại hoàn thành, Câu bị động, Câu điều kiện.
+                Ôn tập toàn diện HK2: Môi trường, Mua sắm, Thảm họa, Du lịch sinh thái, Khoa học & Công nghệ, Hành tinh. Ngữ pháp: Quá khứ tiếp diễn, Câu bị động, HTH, ĐK loại 2.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <a
@@ -178,7 +186,7 @@ const App: React.FC = () => {
                 : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
                 }`}
             >
-              📝 Quiz 70 câu
+              📝 Quiz 70+ câu
             </button>
           </div>
         </div>
@@ -196,7 +204,7 @@ const App: React.FC = () => {
                 Nội dung <span className="gradient-text">chuyên sâu</span>
               </h2>
               <p className="text-slate-500 text-lg mt-2 max-w-2xl mx-auto">
-                Hệ thống hóa kiến thức 3 unit + Review 4. Từ vựng, ngữ pháp, ngữ âm chi tiết.
+                Hệ thống hóa kiến thức 6 unit + Review 3 &amp; 4 (HKII). Từ vựng, ngữ pháp, ngữ âm chi tiết.
               </p>
             </div>
 
@@ -241,10 +249,10 @@ const App: React.FC = () => {
                 Kiểm tra trắc nghiệm
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
-                Quiz <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">70 câu</span>
+                Quiz <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-600">70+ câu</span>
               </h2>
               <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-                Bao phủ Unit 10, 11, 12 và Review 4. Có giải thích chi tiết sau khi nộp bài.
+                Bao phủ Unit 7→12 và Review 3, 4. Hệ thống câu hỏi trắc nghiệm bám sát đề thi HK2.
               </p>
             </div>
             <QuizSection questions={quizQuestions} />
@@ -260,7 +268,7 @@ const App: React.FC = () => {
               Global Success 8 - Ôn tập Cuối kỳ 2
             </h4>
             <p className="text-slate-400 max-w-lg mx-auto">
-              Unit 10, 11, 12 & Review 4. Du lịch sinh thái, Khoa học & Công nghệ, Cuộc sống trên các hành tinh khác.
+              Unit 7→12 & Review 3, 4. Môi trường, Mua sắm, Thảm họa, Du lịch sinh thái, Khoa học & Công nghệ, Hành tinh.
             </p>
           </div>
           <div className="flex justify-center gap-6 mb-10">
