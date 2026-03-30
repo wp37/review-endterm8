@@ -19,7 +19,9 @@ import {
   ShoppingBag,
   CloudLightning,
   Recycle,
-  BookMarked
+  BookMarked,
+  BookOpenCheck,
+  MessageCircle
 } from 'lucide-react';
 import { Lesson, VocabItem, ExerciseItem, QuizQuestion } from './types';
 
@@ -235,90 +237,84 @@ const review3Exercises: ExerciseItem[] = [
 ];
 
 // ============================================================
-// UNIT 10: ECOTOURISM (Du lịch sinh thái)
+// UNIT 10: COMMUNICATION IN THE FUTURE (Giao tiếp trong tương lai)
 // ============================================================
 
 const unit10Vocab: VocabItem[] = [
-  { word: "Ecotourism", ipa: "/ˈiːkəʊˌtʊərɪzəm/ (n)", meaning: "<strong>Du lịch sinh thái</strong>. Du lịch có trách nhiệm với thiên nhiên.<br/><em class='text-xs text-gray-500'>Collocation: promote ecotourism.</em>" },
-  { word: "Sustainable", ipa: "/səˈsteɪnəbl/ (adj)", meaning: "<strong>Bền vững</strong>. Có thể duy trì lâu dài mà không gây hại.<br/><em class='text-xs text-gray-500'>Family: sustainability (n).</em>" },
-  { word: "Wildlife", ipa: "/ˈwaɪldlaɪf/ (n)", meaning: "<strong>Động vật hoang dã</strong>. Các loài sống tự nhiên trong rừng/biển.<br/><em class='text-xs text-gray-500'>Collocation: wildlife conservation.</em>" },
-  { word: "Conservation", ipa: "/ˌkɒnsəˈveɪʃn/ (n)", meaning: "<strong>Sự bảo tồn</strong>. Hành động giữ gìn tài nguyên thiên nhiên.<br/><em class='text-xs text-gray-500'>Family: conserve (v), conservationist (n).</em>" },
-  { word: "Rainforest", ipa: "/ˈreɪnˌfɒrɪst/ (n)", meaning: "<strong>Rừng nhiệt đới ẩm</strong>. Rừng ở vùng nhiệt đới với lượng mưa lớn.<br/><em class='text-xs text-gray-500'>Ví dụ: the Amazon rainforest.</em>" },
-  { word: "Biodiversity", ipa: "/ˌbaɪəʊdaɪˈvɜːsəti/ (n)", meaning: "<strong>Đa dạng sinh học</strong>. Sự phong phú của các loài sinh vật.<br/><em class='text-xs text-gray-500'>Collocation: protect biodiversity.</em>" },
-  { word: "Eco-friendly", ipa: "/ˌiːkəʊ ˈfrendli/ (adj)", meaning: "<strong>Thân thiện với môi trường</strong>. Không gây hại cho hệ sinh thái.<br/><em class='text-xs text-gray-500'>Đồng nghĩa: environmentally friendly.</em>" },
-  { word: "Trek", ipa: "/trek/ (v, n)", meaning: "<strong>Đi bộ đường dài / leo núi</strong>. Hành trình khám phá thiên nhiên.<br/><em class='text-xs text-gray-500'>Ví dụ: trek through the jungle.</em>" },
-  { word: "Local community", ipa: "/ˌləʊkl kəˈmjuːnəti/ (n)", meaning: "<strong>Cộng đồng địa phương</strong>. Người dân sinh sống tại một khu vực.<br/><em class='text-xs text-gray-500'>Collocation: support local communities.</em>" },
-  { word: "Nature reserve", ipa: "/ˈneɪtʃə rɪˌzɜːv/ (n)", meaning: "<strong>Khu bảo tồn thiên nhiên</strong>. Vùng đất được bảo vệ đặc biệt.<br/><em class='text-xs text-gray-500'>Ví dụ: Cát Tiên Nature Reserve.</em>" },
-  { word: "Deforestation", ipa: "/ˌdiːˌfɒrɪˈsteɪʃn/ (n)", meaning: "<strong>Nạn phá rừng</strong>. Việc chặt phá rừng quy mô lớn.<br/><em class='text-xs text-gray-500'>Family: deforest (v).</em>" },
-  { word: "Responsible", ipa: "/rɪˈspɒnsəbl/ (adj)", meaning: "<strong>Có trách nhiệm</strong>. Thực hiện du lịch có ý thức.<br/><em class='text-xs text-gray-500'>Collocation: responsible tourism.</em>" },
+  { word: "Telepathy", ipa: "/təˈlepəθi/ (n)", meaning: "<strong>Thần giao cách cảm</strong>. Khả năng giao tiếp bằng suy nghĩ.<br/><em class='text-xs text-gray-500'>Ví dụ: communicate by telepathy.</em>" },
+  { word: "Holography", ipa: "/həˈlɒɡrəfi/ (n)", meaning: "<strong>Hình ảnh ảo 3D</strong>. Kỹ thuật tạo ảnh không không gian 3 chiều.<br/><em class='text-xs text-gray-500'>Ví dụ: 3D holography technology.</em>" },
+  { word: "Advanced", ipa: "/ədˈvɑːnst/ (adj)", meaning: "<strong>Tiên tiến, cao cấp</strong>. Hiện đại hơn mức bình thường.<br/><em class='text-xs text-gray-500'>Collocation: advanced technology.</em>" },
+  { word: "Communicate", ipa: "/kəˈmjuːnɪkeɪt/ (v)", meaning: "<strong>Giao tiếp, liên lạc</strong>. Trao đổi thông tin với nhau.<br/><em class='text-xs text-gray-500'>Family: communication (n), communicative (adj).</em>" },
+  { word: "Social network", ipa: "/ˌsəʊʃl ˈnetwɜːk/ (n)", meaning: "<strong>Mạng xã hội</strong>. Nền tảng giao tiếp trực tuyến.<br/><em class='text-xs text-gray-500'>Ví dụ: Facebook, TikTok.</em>" },
+  { word: "Chatbot", ipa: "/ˈtʃætbɒt/ (n)", meaning: "<strong>Hệ thống máy tính trả lời tự động</strong>. Chương trình máy tính tự động trò chuyện.<br/><em class='text-xs text-gray-500'>Ví dụ: AI chatbot.</em>" },
+  { word: "Face-to-face", ipa: "/ˌfeɪs tə ˈfeɪs/ (adj, adv)", meaning: "<strong>Trực tiếp, mặt đối mặt</strong>. Nói chuyện trực tiếp với nhau.<br/><em class='text-xs text-gray-500'>Collocation: a face-to-face meeting.</em>" },
+  { word: "Translation machine", ipa: "/trænsˈleɪʃn məˌʃiːn/ (n)", meaning: "<strong>Máy phiên dịch</strong>. Thiết bị dịch ngôn ngữ.<br/><em class='text-xs text-gray-500'>Ví dụ: use a translation machine.</em>" },
+  { word: "Smartphone", ipa: "/ˈsmɑːtfəʊn/ (n)", meaning: "<strong>Điện thoại thông minh</strong>. Điện thoại di động hiện đại.<br/><em class='text-xs text-gray-500'>Ví dụ: a new smartphone.</em>" },
+  { word: "Text message", ipa: "/tekst ˈmesɪdʒ/ (n)", meaning: "<strong>Tin nhắn văn bản</strong>. Tin nhắn chữ gửi qua điện thoại.<br/><em class='text-xs text-gray-500'>Collocation: send a text message.</em>" },
 ];
 
 const unit10Exercises: ExerciseItem[] = [
-  { id: 1, question: "Have you ever _______ (visit) Ha Long Bay?<br/>(Chia động từ trong ngoặc)", answer: "<strong>visited</strong>.<br/>💡 Dấu hiệu: <em>Have you ever</em> → <strong>Hiện tại hoàn thành</strong>: S + have/has + V3.<br/>⚠️ Nhớ: ever = đã từng (dùng trong câu hỏi)." },
-  { id: 2, question: "She _______ (never / try) ecotourism before.<br/>(Chia động từ)", answer: "<strong>has never tried</strong>.<br/>💡 never = không bao giờ → đứng giữa have/has và V3 trong HTH.<br/>Công thức: S + have/has + never + V3." },
-  { id: 3, question: "I _______ already _______ (book) the eco-lodge.<br/>(Chia động từ)", answer: "<strong>have already booked</strong>.<br/>💡 already = đã rồi → đứng giữa have/has và V3.<br/>⚠️ already thường dùng trong câu khẳng định." },
-  { id: 4, question: "_______ you _______ (be) to Phong Nha Cave yet?<br/>(Chia động từ)", answer: "<strong>Have you been</strong>.<br/>💡 yet = chưa/rồi → dùng trong câu hỏi và phủ định HTH.<br/>Câu trả lời: Yes, I have. / No, I haven't yet." },
+  { id: 1, question: "This is not my book. _______ is in my bag.<br/>(Đại từ sở hữu)", answer: "<strong>Mine</strong>.<br/>💡 Đại từ sở hữu thay thế cho tính từ sở hữu + danh từ (my book).<br/>Mine = my book." },
+  { id: 2, question: "Is this pen _______? (your/yours)<br/>(Đại từ sở hữu)", answer: "<strong>yours</strong>.<br/>💡 Đứng cuối câu không có danh từ theo sau → dùng đại từ sở hữu yours (của bạn)." },
+  { id: 3, question: "They will have a meeting _______ Monday morning.<br/>(Giới từ chỉ thời gian)", answer: "<strong>on</strong>.<br/>💡 Giới từ 'on' dùng trước: ngày trong tuần (Monday), hoặc buổi của một ngày cụ thể (Monday morning)." },
+  { id: 4, question: "We usually play sports _______ the weekend.<br/>(Giới từ chỉ thời gian)", answer: "<strong>at/on</strong>.<br/>💡 Giới từ 'at the weekend' (Anh-Anh) hoặc 'on the weekend' (Anh-Mỹ) đều được chấp nhận." },
 ];
 
 // ============================================================
-// UNIT 11: SCIENCE & TECHNOLOGY
+// UNIT 11: SCIENCE AND TECHNOLOGY (Khoa học và công nghệ)
 // ============================================================
 
 const unit11Vocab: VocabItem[] = [
-  { word: "Invention", ipa: "/ɪnˈvenʃn/ (n)", meaning: "<strong>Phát minh</strong>. Thứ được tạo ra lần đầu tiên.<br/><em class='text-xs text-gray-500'>Family: invent (v), inventor (n).</em>" },
-  { word: "Artificial intelligence", ipa: "/ˌɑːtɪˈfɪʃl ɪnˈtelɪdʒəns/ (n)", meaning: "<strong>Trí tuệ nhân tạo (AI)</strong>. Máy tính mô phỏng tư duy con người.<br/><em class='text-xs text-gray-500'>Viết tắt: AI.</em>" },
-  { word: "Robot", ipa: "/ˈrəʊbɒt/ (n)", meaning: "<strong>Robot</strong>. Máy tự động thực hiện công việc.<br/><em class='text-xs text-gray-500'>Collocation: program a robot.</em>" },
-  { word: "Solar panel", ipa: "/ˈsəʊlə ˌpænl/ (n)", meaning: "<strong>Tấm pin mặt trời</strong>. Thiết bị chuyển ánh sáng thành điện.<br/><em class='text-xs text-gray-500'>Collocation: install solar panels.</em>" },
-  { word: "3D printer", ipa: "/ˌθriː ˈdiː ˌprɪntə/ (n)", meaning: "<strong>Máy in 3D</strong>. In ra vật thể 3 chiều từ bản thiết kế số.<br/><em class='text-xs text-gray-500'>Ví dụ: print objects with a 3D printer.</em>" },
-  { word: "Technology", ipa: "/tekˈnɒlədʒi/ (n)", meaning: "<strong>Công nghệ</strong>. Ứng dụng khoa học trong cuộc sống.<br/><em class='text-xs text-gray-500'>Family: technological (adj).</em>" },
-  { word: "Electric vehicle", ipa: "/ɪˈlektrɪk ˈviːɪkl/ (n)", meaning: "<strong>Xe điện</strong>. Phương tiện chạy bằng điện.<br/><em class='text-xs text-gray-500'>Viết tắt: EV.</em>" },
-  { word: "Wireless", ipa: "/ˈwaɪələs/ (adj)", meaning: "<strong>Không dây</strong>. Kết nối mà không cần cáp.<br/><em class='text-xs text-gray-500'>Ví dụ: wireless internet = wifi.</em>" },
-  { word: "Application (app)", ipa: "/ˌæplɪˈkeɪʃn/ (n)", meaning: "<strong>Ứng dụng</strong>. Phần mềm trên điện thoại/máy tính.<br/><em class='text-xs text-gray-500'>Ví dụ: download an app.</em>" },
-  { word: "Innovative", ipa: "/ˈɪnəveɪtɪv/ (adj)", meaning: "<strong>Sáng tạo, đổi mới</strong>. Có nhiều ý tưởng mới.<br/><em class='text-xs text-gray-500'>Family: innovation (n).</em>" },
-  { word: "Digital", ipa: "/ˈdɪdʒɪtl/ (adj)", meaning: "<strong>Kỹ thuật số</strong>. Liên quan đến dữ liệu số.<br/><em class='text-xs text-gray-500'>Ví dụ: digital camera.</em>" },
-  { word: "Launch", ipa: "/lɔːntʃ/ (v)", meaning: "<strong>Ra mắt / phóng lên</strong>. Giới thiệu sản phẩm hoặc phóng tên lửa.<br/><em class='text-xs text-gray-500'>Ví dụ: launch a new phone.</em>" },
+  { word: "Science", ipa: "/ˈsaɪəns/ (n)", meaning: "<strong>Khoa học</strong>. Hoạt động tìm hiểu thế giới.<br/><em class='text-xs text-gray-500'>Family: scientist (n), scientific (adj).</em>" },
+  { word: "Technology", ipa: "/tekˈnɒlədʒi/ (n)", meaning: "<strong>Công nghệ</strong>. Ứng dụng khoa học vào đời sống.<br/><em class='text-xs text-gray-500'>Family: technological (adj).</em>" },
+  { word: "Invention", ipa: "/ɪnˈvenʃn/ (n)", meaning: "<strong>Phát minh</strong>. Tạo ra thứ chưa từng có.<br/><em class='text-xs text-gray-500'>Family: invent (v), inventor (n).</em>" },
+  { word: "Discover", ipa: "/dɪˈskʌvə/ (v)", meaning: "<strong>Khám phá</strong>. Tìm ra thứ đã có sẵn nhưng chưa ai biết.<br/><em class='text-xs text-gray-500'>Family: discovery (n).</em>" },
+  { word: "Online learning", ipa: "/ˈɒnlaɪn ˈlɜːnɪŋ/ (n)", meaning: "<strong>Học trực tuyến</strong>. Học qua mạng internet.<br/><em class='text-xs text-gray-500'>Collocation: an online learning platform.</em>" },
+  { word: "Robot", ipa: "/ˈrəʊbɒt/ (n)", meaning: "<strong>Người máy</strong>. Máy móc tự động hóa.<br/><em class='text-xs text-gray-500'>Ví dụ: robot teacher.</em>" },
+  { word: "Submarine", ipa: "/ˌsʌbməˈriːn/ (n)", meaning: "<strong>Tàu ngầm</strong>. Tàu hoạt động dưới mặt nước.<br/><em class='text-xs text-gray-500'>Ví dụ: nuclear submarine.</em>" },
+  { word: "Machine", ipa: "/məˈʃiːn/ (n)", meaning: "<strong>Máy móc</strong>. Thiết bị cơ điện phục vụ công việc.<br/><em class='text-xs text-gray-500'>Ví dụ: washing machine.</em>" },
+  { word: "Equip", ipa: "/ɪˈkwɪp/ (v)", meaning: "<strong>Trang bị</strong>. Cung cấp thiết bị cần thiết.<br/><em class='text-xs text-gray-500'>Family: equipment (n).</em>" },
+  { word: "Internet", ipa: "/ˈɪntənet/ (n)", meaning: "<strong>Mạng lưới thông tin toàn cầu</strong>.<br/><em class='text-xs text-gray-500'>Collocation: surf the Internet.</em>" },
 ];
 
 const unit11Exercises: ExerciseItem[] = [
-  { id: 1, question: "The new smartphone _______ (develop) by a Vietnamese company.<br/>(Bị động quá khứ)", answer: "<strong>was developed</strong>.<br/>💡 Bị động quá khứ: S + <strong>was/were + V3</strong>.<br/>smartphone (số ít) → was." },
-  { id: 2, question: "Robots _______ (use) in many factories nowadays.<br/>(Bị động hiện tại)", answer: "<strong>are used</strong>.<br/>💡 Bị động hiện tại: S + <strong>am/is/are + V3</strong>.<br/>Robots (số nhiều) → are." },
-  { id: 3, question: "A new app _______ (release) next month.<br/>(Bị động tương lai)", answer: "<strong>will be released</strong>.<br/>💡 Bị động tương lai: S + <strong>will be + V3</strong>." },
-  { id: 4, question: "The first computer _______ (invent) in the 1940s.<br/>(Bị động quá khứ)", answer: "<strong>was invented</strong>.<br/>💡 Sự kiện quá khứ + bị động → was + V3." },
+  { id: 1, question: "\"I will invent a new robot,\" Nam said.<br/>(Viết lại câu tường thuật)", answer: "<strong>Nam said (that) he would invent a new robot.</strong><br/>💡 Lùi thì (will → would), đổi đại từ (I → he)." },
+  { id: 2, question: "\"We are learning online now,\" they said.<br/>(Viết lại câu tường thuật)", answer: "<strong>They said (that) they were learning online then.</strong><br/>💡 Lùi thì (are → were), đổi đại từ (We → they), đổi trạng từ (now → then)." },
+  { id: 3, question: "\"My father bought this tablet yesterday,\" she told me.<br/>(Viết lại câu tường thuật)", answer: "<strong>She told me (that) her father had bought that tablet the previous day / the day before.</strong><br/>💡 Lùi thì QKĐ → QK Hoàn thành (bought → had bought)." },
+  { id: 4, question: "\"I like studying science,\" He said.<br/>(Viết lại câu tường thuật)", answer: "<strong>He said (that) he liked studying science.</strong><br/>💡 Lùi thì HTĐ → QKĐ (like → liked), đổi đại từ (I → he)." },
 ];
 
 // ============================================================
-// UNIT 12: LIFE ON OTHER PLANETS
+// UNIT 12: LIFE ON OTHER PLANETS (Cuộc sống trên các hành tinh)
 // ============================================================
 
 const unit12Vocab: VocabItem[] = [
-  { word: "Alien", ipa: "/ˈeɪliən/ (n, adj)", meaning: "<strong>Người ngoài hành tinh</strong>. Sinh vật từ thế giới khác.<br/><em class='text-xs text-gray-500'>Ví dụ: do aliens exist?</em>" },
-  { word: "Spaceship", ipa: "/ˈspeɪsʃɪp/ (n)", meaning: "<strong>Tàu vũ trụ</strong>. Phương tiện bay trong không gian.<br/><em class='text-xs text-gray-500'>= spacecraft.</em>" },
+  { word: "Planet", ipa: "/ˈplænɪt/ (n)", meaning: "<strong>Hành tinh</strong>. Thiên thể quay quanh ngôi sao.<br/><em class='text-xs text-gray-500'>Ví dụ: Earth is a planet.</em>" },
+  { word: "Alien", ipa: "/ˈeɪliən/ (n)", meaning: "<strong>Người ngoài hành tinh</strong>. Sinh vật từ thế giới khác.<br/><em class='text-xs text-gray-500'>Ví dụ: do aliens exist?</em>" },
+  { word: "Spaceship", ipa: "/ˈspeɪsʃɪp/ (n)", meaning: "<strong>Tàu vũ trụ</strong>. Phương tiện bay trong không gian.<br/><em class='text-xs text-gray-500'>Đồng nghĩa: spacecraft.</em>" },
   { word: "Galaxy", ipa: "/ˈɡæləksi/ (n)", meaning: "<strong>Thiên hà</strong>. Hệ thống hàng tỉ ngôi sao.<br/><em class='text-xs text-gray-500'>Ví dụ: the Milky Way galaxy.</em>" },
-  { word: "Orbit", ipa: "/ˈɔːbɪt/ (n, v)", meaning: "<strong>Quỹ đạo / quay xung quanh</strong>.<br/><em class='text-xs text-gray-500'>Ví dụ: The Earth orbits the Sun.</em>" },
-  { word: "Gravity", ipa: "/ˈɡrævəti/ (n)", meaning: "<strong>Lực hấp dẫn / trọng lực</strong>.<br/><em class='text-xs text-gray-500'>Collocation: low gravity on the Moon.</em>" },
-  { word: "Atmosphere", ipa: "/ˈætməsfɪə/ (n)", meaning: "<strong>Bầu khí quyển</strong>. Lớp khí bao quanh hành tinh.<br/><em class='text-xs text-gray-500'>Ví dụ: Earth's atmosphere.</em>" },
+  { word: "Solar system", ipa: "/ˈsəʊlə ˌsɪstəm/ (n)", meaning: "<strong>Hệ mặt trời</strong>. Mặt Trời và các hành tinh xung quanh.<br/><em class='text-xs text-gray-500'>Ví dụ: planets in our solar system.</em>" },
   { word: "Telescope", ipa: "/ˈtelɪskəʊp/ (n)", meaning: "<strong>Kính thiên văn</strong>. Quan sát vật ở xa.<br/><em class='text-xs text-gray-500'>Ví dụ: look through a telescope.</em>" },
-  { word: "Astronaut", ipa: "/ˈæstrənɔːt/ (n)", meaning: "<strong>Phi hành gia</strong>. Người bay vào vũ trụ.<br/><em class='text-xs text-gray-500'>Family: astronomy (n).</em>" },
-  { word: "Planet", ipa: "/ˈplænɪt/ (n)", meaning: "<strong>Hành tinh</strong>. Thiên thể quay quanh ngôi sao.<br/><em class='text-xs text-gray-500'>Ví dụ: Mars, Venus, Jupiter.</em>" },
-  { word: "Exploration", ipa: "/ˌekspləˈreɪʃn/ (n)", meaning: "<strong>Sự khám phá</strong>. Hành trình tìm hiểu điều chưa biết.<br/><em class='text-xs text-gray-500'>Family: explore (v), explorer (n).</em>" },
-  { word: "Inhabit", ipa: "/ɪnˈhæbɪt/ (v)", meaning: "<strong>Sinh sống, cư trú</strong>. Sống trong một nơi.<br/><em class='text-xs text-gray-500'>Family: inhabitant (n), habitable (adj).</em>" },
-  { word: "Oxygen", ipa: "/ˈɒksɪdʒən/ (n)", meaning: "<strong>Khí oxy</strong>. Khí cần thiết cho sự sống.<br/><em class='text-xs text-gray-500'>Ví dụ: lack of oxygen in space.</em>" },
+  { word: "Atmosphere", ipa: "/ˈætməsfɪə/ (n)", meaning: "<strong>Bầu khí quyển</strong>. Lớp khí bao quanh hành tinh.<br/><em class='text-xs text-gray-500'>Ví dụ: Earth's atmosphere.</em>" },
+  { word: "Gravity", ipa: "/ˈɡrævəti/ (n)", meaning: "<strong>Trọng lực</strong>. Lực hút của Trái Đất hoặc hành tinh.<br/><em class='text-xs text-gray-500'>Collocation: zero gravity (không trọng lực).</em>" },
+  { word: "Astronaut", ipa: "/ˈæstrənɔːt/ (n)", meaning: "<strong>Phi hành gia</strong>. Người bay vào vũ trụ.<br/><em class='text-xs text-gray-500'>Ví dụ: a famous astronaut.</em>" },
+  { word: "Habitable", ipa: "/ˈhæbɪtəbl/ (adj)", meaning: "<strong>Có thể sinh sống được</strong>.<br/><em class='text-xs text-gray-500'>Ví dụ: a habitable planet.</em>" },
 ];
 
 const unit12Exercises: ExerciseItem[] = [
-  { id: 1, question: "If I _______ (be) an astronaut, I _______ (travel) to Mars.<br/>(Câu điều kiện loại 2)", answer: "<strong>were / would travel</strong>.<br/>💡 Câu ĐK loại 2 (không có thật):<br/>If + S + <strong>were/V-ed</strong>, S + <strong>would + V</strong>." },
-  { id: 2, question: "If there _______ (be) water on Mars, plants _______ (grow) there.<br/>(Câu điều kiện)", answer: "<strong>were / would grow</strong>.<br/>💡 be → luôn dùng <em>were</em> (không dùng was) trong câu ĐK loại 2." },
-  { id: 3, question: "If she _______ (have) a spaceship, she _______ (explore) the galaxy.", answer: "<strong>had / would explore</strong>.<br/>💡 If + had (quá khứ đơn) → would + V (nguyên mẫu)." },
-  { id: 4, question: "What _______ you do if you _______ (meet) an alien?", answer: "<strong>would / met</strong>.<br/>💡 Câu hỏi ĐK loại 2: What would S do if S + V-ed?" },
+  { id: 1, question: "\"Do you want to travel to Mars?\" she asked me.<br/>(Câu hỏi gián tiếp Yes/No)", answer: "<strong>She asked me if/whether I wanted to travel to Mars.</strong><br/>💡 Mượn if/whether, lùi thì (want → wanted), trật tự câu khẳng định." },
+  { id: 2, question: "\"Will humans live on other planets?\" he asked.<br/>(Câu hỏi gián tiếp Yes/No)", answer: "<strong>He asked if/whether humans would live on other planets.</strong><br/>💡 Lùi thì will → would. Nhớ dùng trật tự S + V." },
+  { id: 3, question: "\"Where is the nearest galaxy?\" the teacher asked.<br/>(Câu hỏi gián tiếp Wh-)", answer: "<strong>The teacher asked where the nearest galaxy was.</strong><br/>💡 Giữ nguyên từ hỏi (where), đổi trật tự từ (S + V - the nearest galaxy was), lùi thì (is → was)." },
+  { id: 4, question: "\"What did you see in the sky?\" Lan asked him.<br/>(Câu hỏi gián tiếp Wh-)", answer: "<strong>Lan asked him what he had seen in the sky.</strong><br/>💡 Lùi thì (QKĐ → QK Hoàn thành: had seen), bỏ trợ động từ (did)." },
 ];
 
 const review4Exercises: ExerciseItem[] = [
-  { id: 1, question: "_______ you ever _______ on a wildlife safari?<br/>A. Have / been &nbsp; B. Did / go &nbsp; C. Was / going &nbsp; D. Are / been", answer: "<strong>A. Have / been</strong>.<br/>💡 ever → Hiện tại hoàn thành: Have + S + V3?" },
-  { id: 2, question: "The electric car _______ by the engineer last year.<br/>A. invents B. invented C. was invented D. is invented", answer: "<strong>C. was invented</strong>.<br/>💡 Bị động quá khứ (last year) → was + V3." },
-  { id: 3, question: "If I _______ a robot, I wouldn't have to do housework.<br/>A. have B. had C. has D. will have", answer: "<strong>B. had</strong>.<br/>💡 Câu ĐK loại 2: If + quá khứ đơn → would + V." },
-  { id: 4, question: "They _______ already _______ the nature reserve.<br/>A. have / visited B. did / visit C. were / visiting D. had / visit", answer: "<strong>A. have / visited</strong>.<br/>💡 already trong HTH: have + already + V3." },
-  { id: 5, question: "New apps _______ every day by programmers. (develop - bị động)", answer: "<strong>are developed</strong>.<br/>💡 Bị động hiện tại: are + V3." },
-  { id: 6, question: "If there _______ oxygen on Mars, humans _______ live there.", answer: "<strong>were / would live</strong>.<br/>💡 Điều kiện giả định: If + were → would + V." },
+  { id: 1, question: "This is not her laptop. _______ is silver.<br/>A. Her &nbsp; B. Hers &nbsp; C. She &nbsp; D. Herself", answer: "<strong>B. Hers</strong>.<br/>💡 Đại từ sở hữu Hers = her laptop." },
+  { id: 2, question: "\"I am testing a new robot now,\" the scientist said.<br/>A. The scientist said he was testing a new robot then.<br/>B. The scientist said I am testing a new robot now.", answer: "<strong>A. The scientist said he was testing a new robot then.</strong><br/>💡 Đổi (I → he, am → was, now → then)." },
+  { id: 3, question: "He asked me what time the train _______.<br/>A. leaves &nbsp; B. left &nbsp; C. will leave &nbsp; D. is leaving", answer: "<strong>B. left</strong>.<br/>💡 Câu hỏi gián tiếp phải lùi thì: leaves → left." },
+  { id: 4, question: "My birthday is _______ the 5th of June.<br/>A. on &nbsp; B. in &nbsp; C. at &nbsp; D. of", answer: "<strong>A. on</strong>.<br/>💡 Giới từ 'on' dùng cho ngày cụ thể." },
+  { id: 5, question: "People communicate by _______ rather than using phones.<br/>A. holography &nbsp; B. telepathy &nbsp; C. telescope &nbsp; D. gravity", answer: "<strong>B. telepathy</strong>.<br/>💡 telepathy = giao tiếp bằng trí não." },
+  { id: 6, question: "\"Do you like aliens?\" she asked.<br/>She asked me _______ I liked aliens.", answer: "<strong>if / whether</strong>.<br/>💡 Câu hỏi Yes/No chuyển sang gián tiếp thêm if hoặc whether." },
 ];
 
 // ============================================================
@@ -387,88 +383,80 @@ export const quizQuestions: QuizQuestion[] = [
   { id: 138, question: "_______ the storm warning, many families evacuated to higher ground.", options: ["After receiving", "While receive", "Before receive", "When receiving"], correct: 0, explanation: "After receiving = sau khi nhận được → After + V-ing.", unit: 98 },
   { id: 139, question: "I _______ (listen) to music when the phone rang.", options: ["listen", "listened", "was listening", "am listening"], correct: 2, explanation: "QK tiếp diễn: was listening (đang nghe thì điện thoại reo).", unit: 98 },
   { id: 140, question: "The shop _______ open until midnight on weekends.", options: ["stay", "stays", "staying", "will staying"], correct: 1, explanation: "HTĐ cho lịch mở cửa cố định: The shop stays open.", unit: 98 },
-  // --- UNIT 10: ECOTOURISM ---
-  // Vocabulary (5 câu)
-  { id: 1, question: "_______ tourism means travelling responsibly to natural areas.", options: ["Eco", "Space", "Shop", "Medical"], correct: 0, explanation: "Ecotourism = du lịch sinh thái, có trách nhiệm.", unit: 10 },
-  { id: 2, question: "We must protect _______ to keep ecosystems healthy.", options: ["galaxy", "biodiversity", "orbit", "spaceship"], correct: 1, explanation: "Biodiversity = đa dạng sinh học.", unit: 10 },
-  { id: 3, question: "The National Park is a _______ where animals are protected.", options: ["solar panel", "nature reserve", "discount shop", "wireless"], correct: 1, explanation: "Nature reserve = khu bảo tồn thiên nhiên.", unit: 10 },
-  { id: 4, question: "Cutting down trees leads to _______, which destroys habitats.", options: ["deforestation", "exploration", "gravity", "atmosphere"], correct: 0, explanation: "Deforestation = nạn phá rừng.", unit: 10 },
-  { id: 5, question: "Tourists should choose _______ products to protect the environment.", options: ["toxic", "single-use", "eco-friendly", "volcanic"], correct: 2, explanation: "Eco-friendly = thân thiện với môi trường.", unit: 10 },
-  // Grammar - Present Perfect (5 câu)
-  { id: 6, question: "_______ you ever _______ to a rainforest?", options: ["Did / go", "Have / been", "Were / going", "Are / going"], correct: 1, explanation: "Ever → Hiện tại hoàn thành: Have + S + V3?", unit: 10 },
-  { id: 7, question: "She has _______ visited the wildlife sanctuary.", options: ["never", "yesterday", "ago", "last week"], correct: 0, explanation: "Never dùng trong Hiện tại hoàn thành, không dùng với quá khứ đơn.", unit: 10 },
-  { id: 8, question: "They _______ already planted trees in the forest.", options: ["did", "have", "was", "were"], correct: 1, explanation: "Already + V3 trong Hiện tại hoàn thành: have already + V3.", unit: 10 },
-  { id: 9, question: "I _______ (never / see) a dugong in real life.", options: ["never saw", "have never seen", "didn't see", "won't see"], correct: 1, explanation: "Have never seen = chưa từng thấy (Hiện tại hoàn thành).", unit: 10 },
-  { id: 10, question: "Has she finished her report on ecotourism _______?", options: ["ago", "yesterday", "yet", "last year"], correct: 2, explanation: "Yet dùng trong câu hỏi/phủ định Hiện tại hoàn thành.", unit: 10 },
+  // --- UNIT 10: COMMUNICATION IN THE FUTURE ---
+  { id: 141, question: "They communicate by _______, reading each other's minds.", options: ["telepathy", "holography", "chatbot", "social network"], correct: 0, explanation: "Telepathy = thần giao cách cảm.", unit: 10 },
+  { id: 142, question: "Using 3D _______, you can see a virtual person in the room.", options: ["telepathy", "holography", "smartphone", "social network"], correct: 1, explanation: "Holography = hình ảnh ảo không gian 3 chiều.", unit: 10 },
+  { id: 143, question: "Many students use a _______ to answer questions automatically online.", options: ["social network", "chatbot", "telepathy", "face-to-face"], correct: 1, explanation: "Chatbot = phần mềm tự động trò chuyện.", unit: 10 },
+  { id: 144, question: "He prefers having a _______ meeting instead of online chat.", options: ["face-to-face", "translation", "telepathy", "smartphone"], correct: 0, explanation: "Face-to-face = gặp mặt trực tiếp.", unit: 10 },
+  { id: 145, question: "The _______ network allows people to connect on the internet instantly.", options: ["social", "science", "translation", "advanced"], correct: 0, explanation: "Social network = mạng xã hội.", unit: 10 },
+  { id: 146, question: "With a _______ machine, you can understand any foreign language.", options: ["telepathy", "translation", "chatbot", "social"], correct: 1, explanation: "Translation machine = máy phiên dịch.", unit: 10 },
+  { id: 147, question: "I sent her a text _______ but she hasn't replied yet.", options: ["meeting", "message", "chatbot", "network"], correct: 1, explanation: "Text message = tin nhắn văn bản.", unit: 10 },
+  { id: 148, question: "The iPhone is a popular _______ around the world.", options: ["smartphone", "submarine", "spaceship", "telepathy"], correct: 0, explanation: "Smartphone = điện thoại thông minh.", unit: 10 },
+  { id: 149, question: "We use _______ technology to predict weather highly accurately.", options: ["advanced", "social", "face-to-face", "text"], correct: 0, explanation: "Advanced technology = công nghệ tiên tiến.", unit: 10 },
+  { id: 150, question: "She works _______ a bank in the main city center.", options: ["in", "on", "at", "by"], correct: 2, explanation: "At a bank = làm việc tại ngân hàng (chỉ địa điểm). In/At đều được.", unit: 10 },
+  { id: 151, question: "My birthday party is _______ 15th November.", options: ["in", "on", "at", "for"], correct: 1, explanation: "On + ngày tháng cụ thể.", unit: 10 },
+  { id: 152, question: "The last train will leave _______ 6:30 p.m tonight.", options: ["on", "at", "in", "by"], correct: 1, explanation: "At + giờ cụ thể (6:30 p.m).", unit: 10 },
+  { id: 153, question: "Her family lives _______ Hanoi capital.", options: ["on", "in", "at", "by"], correct: 1, explanation: "In + thành phố/quốc gia (Hanoi).", unit: 10 },
+  { id: 154, question: "Our English class starts _______ the morning.", options: ["in", "on", "at", "to"], correct: 0, explanation: "In the morning = vào buổi sáng.", unit: 10 },
+  { id: 155, question: "This is my bicycle. Where is _______?", options: ["your", "you", "yours", "yourself"], correct: 2, explanation: "Yours = your bicycle (đại từ sở hữu).", unit: 10 },
+  { id: 156, question: "That huge house belongs to them. It's _______.", options: ["their", "theirs", "they", "them"], correct: 1, explanation: "Theirs = của họ (đại từ sở hữu thay thế their house).", unit: 10 },
+  { id: 157, question: "I forgot my black pen. Can I borrow _______?", options: ["yours", "your", "my", "mine"], correct: 0, explanation: "Yours = your pen.", unit: 10 },
+  { id: 158, question: "She has her ticket, but Tom lost _______.", options: ["he", "him", "his", "himself"], correct: 2, explanation: "His = his ticket (đại từ sở hữu của he).", unit: 10 },
+  { id: 159, question: "Our school is beautiful, but _______ is bigger.", options: ["their", "theirs", "them", "they"], correct: 1, explanation: "Theirs = their school.", unit: 10 },
+  { id: 160, question: "Are those keys _______?", options: ["your", "yours", "you", "yourself"], correct: 1, explanation: "Yours = keys của bạn.", unit: 10 },
   // --- UNIT 11: SCIENCE & TECHNOLOGY ---
-  // Vocabulary (5 câu)
-  { id: 11, question: "Thomas Edison made many great _______ in his lifetime.", options: ["disasters", "inventions", "planets", "tornadoes"], correct: 1, explanation: "Inventions = phát minh.", unit: 11 },
-  { id: 12, question: "Many factories now use _______ to do dangerous jobs.", options: ["robots", "aliens", "astronauts", "telescopes"], correct: 0, explanation: "Robots = robot thực hiện công việc nguy hiểm.", unit: 11 },
-  { id: 13, question: "_______ panels on the roof can produce electricity from sunlight.", options: ["Solar", "Wireless", "Digital", "Electric"], correct: 0, explanation: "Solar panels = tấm pin mặt trời.", unit: 11 },
-  { id: 14, question: "The new phone _______ at a big technology show last week.", options: ["was launched", "is launching", "launches", "launch"], correct: 0, explanation: "Was launched = được ra mắt (bị động quá khứ).", unit: 11 },
-  { id: 15, question: "_______ technology makes our world more connected.", options: ["Wireless", "Volcanic", "Toxic", "Sustainable"], correct: 0, explanation: "Wireless = không dây, công nghệ không dây.", unit: 11 },
-  // Grammar - Passive Voice (5 câu)
-  { id: 16, question: "This app _______ by a student in Vietnam.", options: ["create", "created", "was created", "is create"], correct: 2, explanation: "Bị động quá khứ: was + V3 (created).", unit: 11 },
-  { id: 17, question: "Electric vehicles _______ in many countries now.", options: ["use", "used", "are used", "was used"], correct: 2, explanation: "Bị động hiện tại: are + V3. vehicles (số nhiều) → are.", unit: 11 },
-  { id: 18, question: "The new hospital _______ next year.", options: ["will build", "will be built", "is built", "was built"], correct: 1, explanation: "Bị động tương lai: will be + V3.", unit: 11 },
-  { id: 19, question: "The bicycle _______ (invent) in the 19th century.", options: ["invented", "was invented", "is invented", "invents"], correct: 1, explanation: "Bị động quá khứ với thời điểm cụ thể: was invented.", unit: 11 },
-  { id: 20, question: "Many houses in the village _______ (destroy) by the storm.", options: ["are destroying", "were destroyed", "destroy", "destroyed"], correct: 1, explanation: "Bị động quá khứ: were + V3. Houses (số nhiều) → were.", unit: 11 },
+  { id: 161, question: "The telephone is a great _______ by Alexander G. Bell.", options: ["science", "invention", "robot", "machine"], correct: 1, explanation: "Invention = phát minh.", unit: 11 },
+  { id: 162, question: "Many schools are using _______ learning platforms now.", options: ["online", "machine", "science", "spaceship"], correct: 0, explanation: "Online learning = học trực tuyến.", unit: 11 },
+  { id: 163, question: "A modern _______ can do housework easily.", options: ["submarine", "technology", "robot", "science"], correct: 2, explanation: "Robot = người máy tự động.", unit: 11 },
+  { id: 164, question: "My dad drives a car using the latest AI _______.", options: ["science", "technology", "submarine", "invention"], correct: 1, explanation: "Technology = công nghệ.", unit: 11 },
+  { id: 165, question: "They built a nuclear _______ to dive deep underwater.", options: ["submarine", "Internet", "machine", "science"], correct: 0, explanation: "Submarine = tàu ngầm.", unit: 11 },
+  { id: 166, question: "Who _______ America first? - Columbus.", options: ["invented", "discovered", "equipped", "texted"], correct: 1, explanation: "Discover = khám phá (tìm ra thứ đã có sẵn).", unit: 11 },
+  { id: 167, question: "You can find unlimited information instantly on the _______.", options: ["Internet", "robot", "machine", "science"], correct: 0, explanation: "Internet: mạng toàn cầu.", unit: 11 },
+  { id: 168, question: "This washing _______ is completely broken.", options: ["technology", "Internet", "machine", "science"], correct: 2, explanation: "Washing machine = máy giặt.", unit: 11 },
+  { id: 169, question: "They _______ the new lab with computers.", options: ["equipped", "invented", "discovered", "launched"], correct: 0, explanation: "Equipped = trang bị thiết bị.", unit: 11 },
+  { id: 170, question: "Mathematics and Physics are important _______ subjects.", options: ["invention", "technology", "science", "machine"], correct: 2, explanation: "Science = môn khoa học.", unit: 11 },
+  { id: 171, question: "He said that he _______ a new device then.", options: ["is testing", "was testing", "will test", "test"], correct: 1, explanation: "Lùi thì: is testing → was testing (hiện tại tiếp diễn → quá khứ tiếp diễn).", unit: 11 },
+  { id: 172, question: "She told me she _______ like biology.", options: ["didn't", "don't", "doesn't", "won't"], correct: 0, explanation: "Lùi thì: don't/doesn't → didn't.", unit: 11 },
+  { id: 173, question: "They said they _______ buy a new machine the following day.", options: ["will", "can", "would", "must"], correct: 2, explanation: "Lùi thì: will → would.", unit: 11 },
+  { id: 174, question: "Nam said: \"I have finished my science project.\"", options: ["Nam said he had finished his science project.", "Nam said he has finished his science project.", "Nam said I had finished my science project.", "Nam said he finished my science project."], correct: 0, explanation: "Lùi thì: have finished → had finished, I → he.", unit: 11 },
+  { id: 175, question: "Mai said she visited the science museum _______.", options: ["yesterday", "tomorrow", "the day before", "next day"], correct: 2, explanation: "yesterday chuyển thành the day before hoặc the previous day.", unit: 11 },
+  { id: 176, question: "Lan told us that she _______ to be an inventor.", options: ["want", "wants", "wanted", "wanting"], correct: 2, explanation: "Lùi thì: want → wanted.", unit: 11 },
+  { id: 177, question: "\"We are studying robotics now,\" the students said.", options: ["The students said they are studying robotics now.", "The students said they were studying robotics then.", "The students said they studied robotics then.", "The students said we were studying robotics then."], correct: 1, explanation: "are studying → were studying, now → then, we → they.", unit: 11 },
+  { id: 178, question: "He said that he could speak English _______.", options: ["here", "now", "there", "today"], correct: 2, explanation: "here chuyển thành there trong câu gián tiếp.", unit: 11 },
+  { id: 179, question: "She said, \"I will buy this robot.\"", options: ["She said she would buy that robot.", "She said she will buy that robot.", "She said she would buy this robot.", "She said I would buy that robot."], correct: 0, explanation: "will → would, this → that, I → she.", unit: 11 },
+  { id: 180, question: "John told me he _______ that submarine the previous year.", options: ["saw", "sees", "has seen", "had seen"], correct: 3, explanation: "QKĐ lùi 1 thì về QK Hoàn thành (had + V3/ed).", unit: 11 },
   // --- UNIT 12: LIFE ON OTHER PLANETS ---
-  // Vocabulary (5 câu)
-  { id: 21, question: "A _______ is a vehicle that can travel into outer space.", options: ["telescope", "spaceship", "solar panel", "3D printer"], correct: 1, explanation: "Spaceship = tàu vũ trụ.", unit: 12 },
-  { id: 22, question: "The Earth _______ around the Sun once every 365 days.", options: ["orbits", "gravity", "inhabits", "atmospheres"], correct: 0, explanation: "Orbits = quay xung quanh (quỹ đạo).", unit: 12 },
-  { id: 23, question: "Scientists use _______ to observe distant stars and planets.", options: ["spaceships", "robots", "telescopes", "apps"], correct: 2, explanation: "Telescopes = kính thiên văn.", unit: 12 },
-  { id: 24, question: "The _______ around Mars is very thin and cannot support human life.", options: ["gravity", "atmosphere", "galaxy", "orbit"], correct: 1, explanation: "Atmosphere = bầu khí quyển.", unit: 12 },
-  { id: 25, question: "Neil Armstrong was the first _______ to walk on the Moon.", options: ["alien", "astronaut", "explorer", "inventor"], correct: 1, explanation: "Astronaut = phi hành gia.", unit: 12 },
-  // Grammar - Conditional Type 2 (5 câu)
-  { id: 26, question: "If I _______ a spaceship, I would fly to the Moon.", options: ["have", "had", "has", "will have"], correct: 1, explanation: "Câu ĐK loại 2: If + quá khứ đơn (had), would + V.", unit: 12 },
-  { id: 27, question: "If gravity on Earth _______ stronger, we would feel heavier.", options: ["is", "was", "were", "will be"], correct: 2, explanation: "Trong câu ĐK loại 2, be → luôn dùng were.", unit: 12 },
-  { id: 28, question: "She _______ the galaxy if she had a powerful telescope.", options: ["explores", "explored", "would explore", "will explore"], correct: 2, explanation: "Vế chính câu ĐK loại 2: would + V (nguyên mẫu).", unit: 12 },
-  { id: 29, question: "If aliens _______ on Earth, life would be very different.", options: ["live", "lived", "lives", "will live"], correct: 1, explanation: "If + quá khứ đơn (lived): diễn đạt điều không có thật.", unit: 12 },
-  { id: 30, question: "What _______ you do if you _______ to travel to Mars?", options: ["do / get", "would / got", "will / get", "did / gotten"], correct: 1, explanation: "Câu hỏi ĐK loại 2: What would S do if S + V-ed?", unit: 12 },
-  // --- REVIEW 4 - Mixed grammar & vocab ---
-  { id: 31, question: "They _______ just returned from their ecotourism trip.", options: ["have", "did", "are", "were"], correct: 0, explanation: "Just + V3 → Hiện tại hoàn thành: have just + V3.", unit: 99 },
-  { id: 32, question: "This road _______ last month.", options: ["will repair", "repairs", "was repaired", "is repaired"], correct: 2, explanation: "Bị động quá khứ (last month): was repaired.", unit: 99 },
-  { id: 33, question: "If the rainforest _______ cut down, many species would disappear.", options: ["is", "was", "were", "will be"], correct: 2, explanation: "Câu ĐK loại 2: If + were + V3 (bị động), would + V.", unit: 99 },
-  { id: 34, question: "Has he _______ the latest smartphone yet?", options: ["buy", "buys", "buying", "bought"], correct: 3, explanation: "Have/has + V3 (Hiện tại hoàn thành): bought.", unit: 99 },
-  { id: 35, question: "Dogs _______ as guide animals for hundreds of years.", options: ["use", "used", "have been used", "will use"], correct: 2, explanation: "Bị động HTH: have been used = đã được sử dụng.", unit: 99 },
-  { id: 36, question: "If she _______ harder, she would pass the exam.", options: ["studies", "studied", "will study", "studying"], correct: 1, explanation: "Câu ĐK loại 2: If + quá khứ đơn (studied).", unit: 99 },
-  { id: 37, question: "The local _______ helps protect wildlife in the area.", options: ["community", "galaxy", "atmosphere", "orbit"], correct: 0, explanation: "Local community = cộng đồng địa phương.", unit: 99 },
-  { id: 38, question: "AI _______ in many fields such as medicine and education.", options: ["apply", "applies", "is applied", "was apply"], correct: 2, explanation: "Bị động hiện tại: is applied.", unit: 99 },
-  { id: 39, question: "I _______ trekking in the Mekong Delta. It was amazing!", options: ["went", "have gone", "go", "was going"], correct: 0, explanation: "Quá khứ đơn với bằng chứng quá khứ ('It was amazing' = hành động đã kết thúc).", unit: 99 },
-  { id: 40, question: "If humans _______ on Mars, new problems would arise.", options: ["live", "lived", "will live", "are living"], correct: 1, explanation: "Câu ĐK loại 2: If + lived (quá khứ đơn).", unit: 99 },
-  // Extra câu cơ bản (từ 41 đến 55 - dễ/trung bình)
-  { id: 41, question: "The smartphone _______ by the company two years ago.", options: ["develops", "developed", "was developed", "is developed"], correct: 2, explanation: "Bị động quá khứ: was developed.", unit: 11 },
-  { id: 42, question: "I have _______ been to a national park in Vietnam.", options: ["ever", "never", "yet", "ago"], correct: 1, explanation: "Have never been = chưa từng đến (HTH phủ định).", unit: 10 },
-  { id: 43, question: "Hundreds of planets _______ outside our solar system.", options: ["discover", "discovered", "have been discovered", "is discover"], correct: 2, explanation: "Bị động HTH: have been discovered.", unit: 12 },
-  { id: 44, question: "If I _______ wings, I would fly to school.", options: ["have", "had", "has", "am having"], correct: 1, explanation: "Điều kiện không có thật: If + had.", unit: 12 },
-  { id: 45, question: "The bird species _______ because of habitat destruction.", options: ["is endangered", "endangers", "endanger", "was endangering"], correct: 0, explanation: "Is endangered = đang bị đe dọa (bị động).", unit: 10 },
-  { id: 46, question: "New medicines _______ every year by researchers.", options: ["create", "is created", "are created", "were create"], correct: 2, explanation: "Bị động hiện tại: are created (số nhiều).", unit: 11 },
-  { id: 47, question: "Have you _______ to any ecotourism destinations in Vietnam?", options: ["go", "went", "gone", "goes"], correct: 2, explanation: "Have + V3: gone (go → went → gone).", unit: 10 },
-  { id: 48, question: "If there _______ no pollution, the river would be clean.", options: ["is", "be", "were", "was"], correct: 2, explanation: "Câu ĐK loại 2: be → always WERE.", unit: 12 },
-  { id: 49, question: "The satellite _______ into orbit last year.", options: ["launched", "was launched", "is launched", "launches"], correct: 1, explanation: "Bị động quá khứ: was launched.", unit: 11 },
-  { id: 50, question: "She has _______ this documentary about space twice.", options: ["watch", "watches", "watched", "watching"], correct: 2, explanation: "Have + V3: watched (xem phim - HTH).", unit: 12 },
-  // Phần nâng cao (câu 51-70 - mixed, harder)
-  { id: 51, question: "Wildlife _______ (protect) by laws in many countries.", options: ["protects", "is protected", "was protecting", "protect"], correct: 1, explanation: "Bị động hiện tại: is protected.", unit: 10 },
-  { id: 52, question: "He wishes he _______ speak to aliens.", options: ["can", "could", "will", "has"], correct: 1, explanation: "Wish + could = mong muốn không có thật (tương tự ĐK loại 2).", unit: 12 },
-  { id: 53, question: "How many countries _______ (visit) by the astronaut so far?", options: ["have been visited", "was visited", "visited", "visit"], correct: 0, explanation: "Bị động HTH với 'so far': have been visited.", unit: 12 },
-  { id: 54, question: "The 3D printer _______ (just / introduce) to our school.", options: ["has just been introduced", "just introduced", "is just introduce", "just was introduced"], correct: 0, explanation: "Bị động HTH: has just been introduced.", unit: 11 },
-  { id: 55, question: "If the government _______ more money into ecotourism, local people would benefit.", options: ["invest", "invested", "investing", "had invested"], correct: 1, explanation: "Câu ĐK loại 2: If + quá khứ đơn (invested).", unit: 10 },
-  { id: 56, question: "Many forests _______ destroyed since the last century.", options: ["have been", "were", "was", "are"], correct: 0, explanation: "Since → HTH bị động: have been destroyed.", unit: 10 },
-  { id: 57, question: "The robot _______ to perform surgery by the year 2030.", options: ["will be programmed", "programmed", "programs", "is program"], correct: 0, explanation: "Bị động tương lai: will be programmed.", unit: 11 },
-  { id: 58, question: "If we _______ renewable energy, we would reduce pollution.", options: ["use", "used", "uses", "using"], correct: 1, explanation: "Câu ĐK loại 2: If + quá khứ đơn (used).", unit: 11 },
-  { id: 59, question: "Life on Mars _______ (never / find) by scientists so far.", options: ["has never been found", "never found", "is never found", "never finds"], correct: 0, explanation: "HTH + bị động + never: has never been found.", unit: 12 },
-  { id: 60, question: "Plastic bags _______ (ban) in many cities to protect the ocean.", options: ["ban", "have been banned", "was banning", "bans"], correct: 1, explanation: "Bị động HTH: have been banned.", unit: 10 },
-  { id: 61, question: "If I _______ the president, I would invest in green technology.", options: ["am", "were", "will be", "had been"], correct: 1, explanation: "Câu ĐK loại 2: If + were (luôn dùng were cho be).", unit: 11 },
-  { id: 62, question: "The first satellite _______ by the Soviet Union in 1957.", options: ["launched", "was launched", "has launched", "is launched"], correct: 1, explanation: "Bị động quá khứ với thời điểm cụ thể: was launched.", unit: 12 },
-  { id: 63, question: "We _______ on an ecotourism trip three times already.", options: ["go", "went", "have gone", "are going"], correct: 2, explanation: "Three times already → Hiện tại hoàn thành: have gone.", unit: 10 },
-  { id: 64, question: "Digital maps _______ by explorers to navigate the jungle.", options: ["are used", "used", "use", "have use"], correct: 0, explanation: "Bị động hiện tại: are used.", unit: 11 },
-  { id: 65, question: "If I _______ a telescope, I would study the stars every night.", options: ["own", "owned", "owns", "will own"], correct: 1, explanation: "Câu ĐK loại 2: If + owned (quá khứ đơn).", unit: 12 },
-  { id: 66, question: "The conservation programme _______ recently by the government.", options: ["approved", "is approved", "has been approved", "approves"], correct: 2, explanation: "Recently + bị động → HTH: has been approved.", unit: 10 },
-  { id: 67, question: "Renewable energy sources _______ to replace fossil fuels.", options: ["develop", "developed", "are being developed", "was developed"], correct: 2, explanation: "Bị động tiếp diễn: are being developed.", unit: 11 },
-  { id: 68, question: "If humans _______ in space for long periods, they would need special suits.", options: ["live", "lived", "are living", "will live"], correct: 1, explanation: "Câu ĐK loại 2: If + lived.", unit: 12 },
-  { id: 69, question: "The local community _______ involved in sustainable tourism projects.", options: ["has been", "have been", "is been", "was being"], correct: 0, explanation: "has been (số ít/the local community) → has been involved.", unit: 10 },
-  { id: 70, question: "If a cure for cancer _______ (find), millions of lives would be saved.", options: ["found", "were found", "finds", "is found"], correct: 1, explanation: "Bị động trong câu ĐK loại 2: If + were found.", unit: 11 },
+  { id: 181, question: "Earth is the only _______ known to support life.", options: ["spaceship", "planet", "galaxy", "telescope"], correct: 1, explanation: "Planet = hành tinh.", unit: 12 },
+  { id: 182, question: "Do you believe that an _______ could visit Earth?", options: ["alien", "gravity", "telescope", "orbit"], correct: 0, explanation: "Alien = người ngoài hành tinh.", unit: 12 },
+  { id: 183, question: "The astronaut travelled in a modern _______.", options: ["telescope", "spaceship", "galaxy", "atmosphere"], correct: 1, explanation: "Spaceship = tàu vũ trụ.", unit: 12 },
+  { id: 184, question: "The Milky Way is our _______.", options: ["planet", "spaceship", "galaxy", "gravity"], correct: 2, explanation: "Galaxy = thiên hà.", unit: 12 },
+  { id: 185, question: "Our solar _______ consists of the Sun and eight planets.", options: ["system", "machine", "robot", "network"], correct: 0, explanation: "Solar system = hệ mặt trời.", unit: 12 },
+  { id: 186, question: "Scientists use a large _______ to see far away stars.", options: ["smartphone", "telescope", "submarine", "machine"], correct: 1, explanation: "Telescope = kính thiên văn.", unit: 12 },
+  { id: 187, question: "The Earth's _______ contains 21% oxygen.", options: ["gravity", "atmosphere", "orbit", "galaxy"], correct: 1, explanation: "Atmosphere = bầu khí quyển.", unit: 12 },
+  { id: 188, question: "Without _______, we would float away into space.", options: ["oxygen", "telescope", "gravity", "alien"], correct: 2, explanation: "Gravity = trọng lực, sức hút.", unit: 12 },
+  { id: 189, question: "Neil Armstrong was a famous American _______.", options: ["alien", "astronaut", "spaceship", "planet"], correct: 1, explanation: "Astronaut = phi hành gia.", unit: 12 },
+  { id: 190, question: "Scientists are looking for a _______ planet like Earth.", options: ["habitable", "impossible", "advanced", "social"], correct: 0, explanation: "Habitable = có thể sinh sống được.", unit: 12 },
+  { id: 191, question: "She asked me _______ I liked exploring the universe.", options: ["that", "whether", "when", "which"], correct: 1, explanation: "Câu hỏi Yes/No gián tiếp dùng if hoặc whether.", unit: 12 },
+  { id: 192, question: "The teacher asked us where Jupiter _______.", options: ["is", "was", "been", "were"], correct: 1, explanation: "Câu hỏi gián tiếp có từ hỏi (where): S + V (lùi thì is → was). Trật tự S + V.", unit: 12 },
+  { id: 193, question: "He asked me _______ I had ever seen a UFO.", options: ["if", "what", "where", "how"], correct: 0, explanation: "Câu hỏi Yes/No dùng if (nếu/xem có phải không).", unit: 12 },
+  { id: 194, question: "Mai asked Peter what he _______ then.", options: ["is doing", "was doing", "does", "did"], correct: 1, explanation: "Trật tự câu hỏi gián tiếp: S + V lùi thì (was doing). then = now.", unit: 12 },
+  { id: 195, question: "He asked his mom when the train _______.", options: ["leave", "leaves", "will leave", "would leave"], correct: 3, explanation: "Lùi thì will leave → would leave.", unit: 12 },
+  { id: 196, question: "\"Do aliens exist?\" he asked. = He asked _______.", options: ["if aliens do exist", "whether aliens existed", "if aliens exist", "whether did aliens exist"], correct: 1, explanation: "Bỏ mượn trợ động từ do, lùi thì (exist → existed), dùng whether/if.", unit: 12 },
+  { id: 197, question: "I asked Tom how many planets _______ in the solar system.", options: ["there are", "there were", "are there", "were there"], correct: 1, explanation: "Trật tự S + V (there were), không đảo ngữ như were there.", unit: 12 },
+  { id: 198, question: "\"Why do you want to be an astronaut?\" she asked me.", options: ["She asked me why I wanted to be an astronaut.", "She asked me why did I want to be an astronaut.", "She asked me why I want to be an astronaut.", "She asked me why do I want to be an astronaut."], correct: 0, explanation: "S + V (I wanted), bỏ trợ động từ do.", unit: 12 },
+  { id: 199, question: "They asked us _______ we would build a spaceship.", options: ["that", "whether", "when", "which"], correct: 1, explanation: "Câu hỏi Yes/No → whether/if. Or could be When. Whether is safest for general conditional.", unit: 12 },
+  { id: 200, question: "He asked me how to use the _______ machine.", options: ["translation", "translate", "translator", "translating"], correct: 0, explanation: "Translation machine = máy dịch.", unit: 12 },
+  // --- REVIEW 4 ---
+  { id: 201, question: "In 2050, we might use _______ to communicate by thoughts.", options: ["smartphones", "holography", "telepathy", "letters"], correct: 2, explanation: "Telepathy = thần giao cách cảm.", unit: 99 },
+  { id: 202, question: "I met him _______ the cinema.", options: ["in", "on", "at", "by"], correct: 2, explanation: "At the cinema (địa điểm cụ thể).", unit: 99 },
+  { id: 203, question: "The blue pen is her pen, and the red one is _______.", options: ["my", "mine", "me", "I"], correct: 1, explanation: "Mine = my pen. (Đại từ sở hữu).", unit: 99 },
+  { id: 204, question: "He proudly told us that he _______ a new app.", options: ["created", "creates", "had created", "is creating"], correct: 2, explanation: "Lùi thì thì chia QK Hoàn thành cho việc đã xong (created → had created).", unit: 99 },
+  { id: 205, question: "A robotic doctor can perform _______ safely.", options: ["machines", "operations", "telepathy", "galaxies"], correct: 1, explanation: "Operations = phẫu thuật.", unit: 99 },
+  { id: 206, question: "She asked me if I _______ aliens on Mars.", options: ["believe in", "believed in", "believes in", "believing"], correct: 1, explanation: "Câu hỏi gián tiếp lùi thì (believed).", unit: 99 },
+  { id: 207, question: "The astronaut walked in zero _______ environment.", options: ["atmosphere", "spaceship", "gravity", "alien"], correct: 2, explanation: "Zero gravity = Không trọng lực.", unit: 99 },
+  { id: 208, question: "They said they _______ visit the science center the next day.", options: ["will", "can", "would", "shall"], correct: 2, explanation: "Lùi thì will → would. The next day = tomorrow.", unit: 99 },
+  { id: 209, question: "\"Will robots replace humans?\" he asked.", options: ["He asked that robots would replace humans.", "He asked if robots would replace humans.", "He asked if robots will replace humans.", "He asked if would robots replace humans."], correct: 1, explanation: "Yes/No dùng If, lùi thì will → would, trật tự S + V.", unit: 99 },
+  { id: 210, question: "Is this notebook _______ or his?", options: ["your", "yours", "you", "mine"], correct: 1, explanation: "Yours = của bạn.", unit: 99 }
 ];
 
 // ============================================================
@@ -725,108 +713,122 @@ export const lessons: Lesson[] = [
   },
   // UNIT 10
   {
-    id: 0, title: "Unit 10: Từ vựng Du lịch sinh thái", unit: 10, icon: TreePine,
-    color: "from-green-600 to-emerald-500",
+    id: 1001, title: "Unit 10: Từ vựng Communication in the future", unit: 10, icon: MessageCircle,
+    color: "from-blue-600 to-indigo-500",
     content: (
       <div>
-        <div className="bg-green-50 p-6 rounded-2xl mb-8 border border-green-100">
-          <h2 className="text-2xl font-bold text-green-800 mb-2">Ecotourism</h2>
-          <p className="text-green-700">Từ vựng về du lịch sinh thái, bảo tồn thiên nhiên, đa dạng sinh học.</p>
+        <div className="bg-blue-50 p-6 rounded-2xl mb-8 border border-blue-100">
+          <h2 className="text-2xl font-bold text-blue-800 mb-2">Communication in the future</h2>
+          <p className="text-blue-700">Từ vựng về giao tiếp trong tương lai, thiết bị thông minh, mạng xã hội và thần giao cách cảm.</p>
         </div>
-        <VocabTable items={unit10Vocab} colorTheme="bg-gradient-to-r from-green-600 to-emerald-500" />
+        <VocabTable items={unit10Vocab} colorTheme="bg-gradient-to-r from-blue-600 to-indigo-500" />
       </div>
     )
   },
   {
-    id: 1, title: "Unit 10: Ngữ pháp Hiện tại hoàn thành", unit: 10, icon: Globe,
-    color: "from-emerald-500 to-teal-600",
+    id: 1002, title: "Unit 10: Ngữ pháp Đại từ sở hữu & Giới từ", unit: 10, icon: BookOpenCheck,
+    color: "from-indigo-500 to-violet-600",
     content: (
       <div>
-        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
-          <p className="text-yellow-800 font-bold">Trọng tâm: Present Perfect – S + have/has + V3</p>
-          <p className="text-yellow-700 text-sm mt-1">Dấu hiệu: ever, never, already, yet, just, since, for, recently</p>
+        <div className="bg-indigo-50 border-l-4 border-indigo-400 p-4 mb-8">
+          <p className="text-indigo-800 font-bold">Trọng tâm: Possessive Pronouns & Prepositions of Time and Place</p>
         </div>
         <GrammarBox
-          title="Thì Hiện tại hoàn thành"
-          color="bg-emerald-600"
+          title="1. Đại từ sở hữu (Possessive Pronouns)"
+          color="bg-indigo-600"
           rule={
             <div className="space-y-2 text-sm">
-              <p><strong>Câu khẳng định:</strong> S + have/has + V3</p>
-              <p><strong>Câu phủ định:</strong> S + have/has + not + V3</p>
-              <p><strong>Câu hỏi:</strong> Have/Has + S + V3?</p>
-              <p className="mt-2 text-emerald-700">• ever/never đứng trước V3 &nbsp; • already đứng trước V3 (KĐ) &nbsp; • yet cuối câu (C.hỏi/PĐ)</p>
+              <p>Đại từ sở hữu thay thế cho <strong>Tính từ sở hữu + Danh từ</strong> để tránh lặp lại.</p>
+              <p>mine, yours, his, hers, ours, theirs.</p>
+              <p className="mt-2 text-indigo-700">⚠️ Không bao giờ thêm danh từ phía sau đại từ sở hữu.</p>
             </div>
           }
           examples={[
-            { correct: "Have you ever visited Ha Long Bay?", explain: "Ever trong câu hỏi HTH." },
-            { correct: "She has never tried ecotourism before.", explain: "Never + HTH: has never + V3." },
-            { correct: "I have already booked the eco-lodge.", incorrect: "I already booked the eco-lodge.", explain: "Already → dùng HTH, không dùng quá khứ đơn." },
+            { correct: "This is my pen. Yours is on the table.", explain: "Yours = Your pen." },
+            { correct: "Is this book his or hers?", explain: "His = His book, Hers = Her book." },
           ]}
         />
-        <div className="space-y-4">
+        <GrammarBox
+          title="2. Giới từ chỉ Thời gian & Địa điểm"
+          color="bg-violet-600"
+          rule={
+            <div className="space-y-2 text-sm">
+              <p>• <strong>in</strong>: tháng, năm, mùa, buổi / thành phố, quốc gia, phòng.</p>
+              <p>• <strong>on</strong>: ngày trong tuần, ngày tháng / trên bề mặt.</p>
+              <p>• <strong>at</strong>: giờ cụ thể, dịp lễ / địa điểm cụ thể (trường, nhà ga).</p>
+            </div>
+          }
+          examples={[
+            { correct: "We start school in September on Monday morning.", explain: "In + tháng, On + thứ." },
+            { correct: "I am waiting at the station.", explain: "At + địa điểm cụ thể." },
+          ]}
+        />
+        <div className="space-y-4 mt-8">
+          <h3 className="font-bold text-gray-800 text-lg flex items-center gap-2 mb-4"><ClipboardCheck className="text-indigo-600" /> Luyện tập</h3>
           {unit10Exercises.map((ex, idx) => <ExerciseCard key={ex.id} item={ex} idx={idx} />)}
         </div>
       </div>
     )
   },
   {
-    id: 2, title: "Unit 10: Ngữ âm /ɪ/ & /iː/", unit: 10, icon: Mic,
-    color: "from-teal-500 to-cyan-500",
+    id: 1003, title: "Unit 10: Ngữ âm – Trọng âm đuôi -ese & -ee", unit: 10, icon: Mic,
+    color: "from-violet-500 to-purple-500",
     content: (
       <div>
-        <h2 className="text-2xl font-bold text-teal-800 mb-6">Phân biệt âm /ɪ/ (ngắn) và /iː/ (dài)</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <PhoneticCard pair="/ɪ/ ngắn" words={["bit", "sit", "ship", "fish", "big"]} tip="Miệng hé, không kéo dài. Ví dụ: sit, fish, big." />
-          <PhoneticCard pair="/iː/ dài" words={["beat", "seat", "sheep", "tree", "green"]} tip="Kéo dài môi sang hai bên. Ví dụ: see, tree, sleep." />
+        <h2 className="text-2xl font-bold text-violet-800 mb-6">Trọng âm đuôi -ese & -ee</h2>
+        <div className="bg-violet-50 p-4 rounded-xl mb-6 text-violet-800">
+          Quy tắc: Những từ kết thúc bằng đuôi <strong>-ese</strong> hoặc <strong>-ee</strong>, trọng âm rơi vào <strong>chính âm tiết đó</strong>.
         </div>
-        <div className="mt-8 bg-cyan-50 p-6 rounded-xl border border-cyan-100 text-center">
-          <p className="font-bold text-cyan-900 text-lg mb-3">Minimal Pairs</p>
-          <div className="flex flex-wrap justify-center gap-6 text-lg font-medium text-cyan-700">
-            <span>bit /bɪt/ ↔ beat /biːt/</span>
-            <span>ship /ʃɪp/ ↔ sheep /ʃiːp/</span>
-          </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <PhoneticCard pair="Đuôi -ese" words={["Vietnam-ESE", "Japan-ESE", "Chin-ESE"]} tip="Nhấn mạnh vào âm cuối -ESE." />
+          <PhoneticCard pair="Đuôi -ee" words={["train-EE", "employ-EE", "refer-EE"]} tip="Nhấn mạnh vào âm cuối -EE." />
         </div>
       </div>
     )
   },
   // UNIT 11
   {
-    id: 3, title: "Unit 11: Từ vựng Khoa học & Công nghệ", unit: 11, icon: Cpu,
+    id: 1101, title: "Unit 11: Từ vựng Science and Technology", unit: 11, icon: Cpu,
     color: "from-sky-500 to-blue-600",
     content: (
       <div>
         <div className="bg-sky-50 p-6 rounded-2xl mb-8 border border-sky-100">
           <h2 className="text-2xl font-bold text-sky-800 mb-2">Science & Technology</h2>
-          <p className="text-sky-700">Từ vựng về phát minh, robot, AI, năng lượng mặt trời và công nghệ hiện đại.</p>
+          <p className="text-sky-700">Từ vựng về khoa học, công nghệ, thiết bị học trực tuyến, phát minh máy móc.</p>
         </div>
         <VocabTable items={unit11Vocab} colorTheme="bg-gradient-to-r from-sky-500 to-blue-600" />
       </div>
     )
   },
   {
-    id: 4, title: "Unit 11: Ngữ pháp Câu bị động", unit: 11, icon: FlaskConical,
+    id: 1102, title: "Unit 11: Ngữ pháp Câu tường thuật (Statements)", unit: 11, icon: FlaskConical,
     color: "from-blue-500 to-indigo-600",
     content: (
       <div>
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-8">
-          <p className="text-blue-800 font-bold">Passive Voice – Câu bị động</p>
-          <p className="text-blue-700 text-sm mt-1">Cấu trúc: <strong>S + be + V3 (+ by + O)</strong></p>
+          <p className="text-blue-800 font-bold">Reported Speech (Statements) – Câu tường thuật dạng khẳng định</p>
+          <p className="text-blue-700 text-sm mt-1">Cấu trúc: <strong>S + said/told (that) + S + V (đã lùi thì)</strong></p>
         </div>
         <GrammarBox
-          title="Câu bị động – 3 thì cơ bản"
+          title="Quy tắc chuyển câu tường thuật"
           color="bg-blue-600"
           rule={
             <div className="space-y-2 text-sm">
-              <p>• <strong>HTĐ:</strong> S + <strong>am/is/are</strong> + V3</p>
-              <p>• <strong>QKĐ:</strong> S + <strong>was/were</strong> + V3</p>
-              <p>• <strong>TL:</strong> S + <strong>will be</strong> + V3</p>
-              <p className="mt-2 text-blue-700">Số ít → is/was | Số nhiều → are/were</p>
+              <p><strong>1. Đổi đại từ:</strong> I → he/she, my → his/her, we → they.</p>
+              <p><strong>2. Lùi thì:</strong></p>
+              <ul className="list-disc ml-5">
+                <li>Hiện tại đơn (V1) → Quá khứ đơn (V2/ed)</li>
+                <li>HT tiếp diễn (am/is/are V-ing) → QK tiếp diễn (was/were V-ing)</li>
+                <li>Quá khứ đơn (V2/ed) → QK Hoàn thành (had + V3/ed)</li>
+                <li>HT Hoàn thành (have/has V3) → QK Hoàn thành (had + V3/ed)</li>
+                <li>will → would / can → could / must → had to</li>
+              </ul>
+              <p><strong>3. Đổi trạng từ:</strong> now → then, today → that day, tomorrow → the next day, yesterday → the day before, this → that.</p>
             </div>
           }
           examples={[
-            { correct: "Robots are used in many factories.", explain: "Bị động HTĐ: are + V3." },
-            { correct: "The phone was invented by Bell.", explain: "Bị động QKĐ: was + V3." },
-            { correct: "A new vaccine will be developed next year.", explain: "Bị động TL: will be + V3." },
+            { correct: "\"I like science,\" he said.", explain: "Gián tiếp: He said he liked science." },
+            { correct: "\"We will invention a robot tomorrow,\" they said.", explain: "Gián tiếp: They said they would invent a robot the next day." },
           ]}
         />
         <div className="space-y-4 mt-8">
@@ -836,61 +838,59 @@ export const lessons: Lesson[] = [
       </div>
     )
   },
-  {
-    id: 5, title: "Unit 11: Ngữ âm – Trọng âm từ", unit: 11, icon: Mic,
-    color: "from-indigo-500 to-violet-600",
-    content: (
-      <div>
-        <h2 className="text-2xl font-bold text-indigo-800 mb-6">Word Stress – Trọng âm từ trong khoa học công nghệ</h2>
-        <div className="bg-indigo-50 p-4 rounded-xl mb-6 text-indigo-800">
-          Quy tắc: Danh từ/tính từ 2 âm tiết → nhấn âm <strong>1</strong>. Động từ 2 âm tiết → nhấn âm <strong>2</strong>.
-        </div>
-        <div className="grid md:grid-cols-2 gap-6">
-          <PhoneticCard pair="Nhấn âm 1" words={["RO-bot", "DI-gi-tal", "WIRE-less", "SO-lar", "IN-no-vate"]} tip="Danh từ/tính từ thường nhấn âm đầu." />
-          <PhoneticCard pair="Nhấn âm 2/3" words={["tech-NOL-o-gy", "in-VEN-tion", "in-NO-va-tion", "e-LEC-tric"]} tip="Từ -tion, -gy thường nhấn âm tiết trước hậu tố." />
-        </div>
-      </div>
-    )
-  },
   // UNIT 12
   {
-    id: 6, title: "Unit 12: Từ vựng Cuộc sống trên các hành tinh", unit: 12, icon: Stars,
+    id: 1201, title: "Unit 12: Từ vựng Life on other planets", unit: 12, icon: Stars,
     color: "from-indigo-600 to-purple-700",
     content: (
       <div>
         <div className="bg-indigo-50 p-6 rounded-2xl mb-8 border border-indigo-100">
           <h2 className="text-2xl font-bold text-indigo-800 mb-2">Life on Other Planets</h2>
-          <p className="text-indigo-700">Từ vựng về không gian, hành tinh, phi hành gia và khám phá vũ trụ.</p>
+          <p className="text-indigo-700">Từ vựng về hành tinh, người ngoài hành tinh, tàu vũ trụ và hệ mặt trời.</p>
         </div>
         <VocabTable items={unit12Vocab} colorTheme="bg-gradient-to-r from-indigo-600 to-purple-700" />
       </div>
     )
   },
   {
-    id: 7, title: "Unit 12: Ngữ pháp Câu điều kiện loại 2", unit: 12, icon: Rocket,
+    id: 1202, title: "Unit 12: Ngữ pháp Câu hỏi gián tiếp (Reported Questions)", unit: 12, icon: Rocket,
     color: "from-purple-500 to-fuchsia-600",
     content: (
       <div>
         <div className="bg-purple-50 border-l-4 border-purple-400 p-4 mb-8">
-          <p className="text-purple-800 font-bold">Conditional Sentence Type 2 – Câu điều kiện loại 2</p>
-          <p className="text-purple-700 text-sm mt-1">Diễn đạt điều <strong>không có thật ở hiện tại</strong>.</p>
+          <p className="text-purple-800 font-bold">Reported Questions – Câu hỏi gián tiếp</p>
+          <p className="text-purple-700 text-sm mt-1">Sử dụng để thuật lại câu hỏi của người khác.</p>
         </div>
         <GrammarBox
-          title="Câu điều kiện loại 2"
+          title="1. Câu hỏi Yes/No"
           color="bg-purple-600"
           rule={
             <div className="space-y-2 text-sm">
-              <p className="text-lg font-bold">If + S + V-ed/were, S + would + V</p>
-              <p>• Mệnh đề If: dùng <strong>quá khứ đơn</strong> hoặc <strong>were</strong> (to be)</p>
-              <p>• Mệnh đề chính: dùng <strong>would + V nguyên mẫu</strong></p>
+              <p className="text-lg font-bold">S + asked (me) + if/whether + S + V (lùi thì)</p>
               <div className="bg-amber-50 p-2 rounded mt-2 border border-amber-200">
-                <p className="text-amber-800">⚠️ to be → luôn dùng <strong>WERE</strong> (không dùng was)</p>
+                <p className="text-amber-800">⚠️ Bỏ các trợ động từ (do/does/did) và sử dụng thì quá khứ. Trật tự cuối là Khẳng Định, KHÔNG đảo ngữ.</p>
               </div>
             </div>
           }
           examples={[
-            { correct: "If I had a spaceship, I would travel to Mars.", explain: "had (QKĐ) → would travel." },
-            { correct: "If I were an astronaut, I would walk on the Moon.", incorrect: "If I was an astronaut...", explain: "Be → dùng WERE." },
+            { correct: "\"Do you like aliens?\" she asked.", explain: "She asked me if I liked aliens." },
+            { correct: "\"Will it rain?\" he asked.", explain: "He asked if it would rain." },
+          ]}
+        />
+        <GrammarBox
+          title="2. Câu hỏi có từ hỏi Wh-"
+          color="bg-fuchsia-600"
+          rule={
+            <div className="space-y-2 text-sm">
+              <p className="text-lg font-bold">S + asked (me) + Wh- + S + V (lùi thì)</p>
+              <div className="bg-amber-50 p-2 rounded mt-2 border border-amber-200">
+                <p className="text-amber-800">⚠️ Giữ nguyên từ hỏi Wh-, KHÔNG mượn trợ động từ. S đứng trước V lùi thì.</p>
+              </div>
+            </div>
+          }
+          examples={[
+            { correct: "\"Where do you live?\" they asked.", explain: "They asked where I lived." },
+            { correct: "\"What time is it?\" he asked.", explain: "He asked what time it was." },
           ]}
         />
         <div className="space-y-4 mt-8">
@@ -900,28 +900,15 @@ export const lessons: Lesson[] = [
       </div>
     )
   },
-  {
-    id: 8, title: "Unit 12: Ngữ âm – Ngữ điệu (Intonation)", unit: 12, icon: Mic,
-    color: "from-fuchsia-500 to-rose-500",
-    content: (
-      <div>
-        <h2 className="text-2xl font-bold text-fuchsia-800 mb-6">Intonation – Ngữ điệu câu hỏi & câu trần thuật</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <PhoneticCard pair="↘ Xuống" words={["Wh- questions", "Statements", "Commands"]} tip="Ngữ điệu đi xuống: câu hỏi Wh-, câu trần thuật, mệnh lệnh." />
-          <PhoneticCard pair="↗ Lên" words={["Yes/No questions", "Unfinished lists", "Polite requests"]} tip="Ngữ điệu đi lên: câu hỏi Yes/No, danh sách chưa kết thúc." />
-        </div>
-      </div>
-    )
-  },
   // REVIEW 4
   {
-    id: 9, title: "Review 4: Ôn tập tổng hợp", unit: 99, icon: RotateCcw,
+    id: 9901, title: "Review 4: Ôn tập tổng hợp", unit: 99, icon: RotateCcw,
     color: "from-rose-500 to-pink-600",
     content: (
       <div>
         <div className="bg-rose-50 p-6 rounded-2xl mb-8 border border-rose-100">
           <h2 className="text-2xl font-bold text-rose-800 mb-2">🔄 Review 4: Tổng hợp Unit 10-12</h2>
-          <p className="text-rose-700">Ôn tập tổng hợp từ vựng và ngữ pháp từ cả 3 unit cuối kỳ.</p>
+          <p className="text-rose-700">Ôn tập trọn bộ đại từ sở hữu, giới từ và hệ thống câu tường thuật.</p>
         </div>
         <div className="space-y-4">
           {review4Exercises.map((ex, idx) => <ExerciseCard key={ex.id} item={ex} idx={idx} />)}
@@ -930,34 +917,34 @@ export const lessons: Lesson[] = [
     )
   },
   {
-    id: 10, title: "Review 4: Ngữ pháp tổng hợp", unit: 99, icon: Star,
+    id: 9902, title: "Review 4: Ngữ pháp tổng hợp", unit: 99, icon: Star,
     color: "from-pink-500 to-rose-600",
     content: (
       <div>
         <div className="bg-pink-50 border-l-4 border-pink-400 p-4 mb-8">
-          <p className="text-pink-800 font-bold">Tổng hợp: Present Perfect + Passive Voice + Conditional Type 2</p>
+          <p className="text-pink-800 font-bold">Tổng hợp: Possessive Pronouns + Reported Speech</p>
         </div>
         <GrammarBox
-          title="1. Hiện tại hoàn thành"
-          color="bg-emerald-600"
-          rule={<p><strong>S + have/has + V3</strong>. Dấu hiệu: ever, never, already, yet, just, since, for.</p>}
-          examples={[{ correct: "We have just planted 100 trees in the forest.", explain: "Just + V3 → HTH." }]}
+          title="1. Đại từ sở hữu & Giới từ"
+          color="bg-indigo-600"
+          rule={<p><strong>mine, yours, theirs...</strong>. Giới từ IN (tháng, năm), ON (thứ, ngày), AT (giờ).</p>}
+          examples={[{ correct: "This laptop is mine.", explain: "Mine = my laptop." }]}
         />
         <GrammarBox
-          title="2. Câu bị động"
+          title="2. Câu tường thuật trần thuật"
           color="bg-blue-600"
-          rule={<p><strong>S + be + V3</strong>. HTĐ: is/are + V3 | QKĐ: was/were + V3 | TL: will be + V3.</p>}
+          rule={<p><strong>S + said that + S + V(lùi thì)</strong>. Đổi ngôi, lùi thì, đổi trạng từ.</p>}
           examples={[
-            { correct: "Solar panels are installed on many rooftops.", explain: "Bị động HTĐ: are + V3." },
-            { correct: "The rocket was launched successfully.", explain: "Bị động QKĐ: was + V3." },
+            { correct: "He said he was studying then.", explain: "Qúa khứ tiếp diễn." },
           ]}
         />
         <GrammarBox
-          title="3. Câu điều kiện loại 2"
+          title="3. Câu hỏi gián tiếp"
           color="bg-purple-600"
-          rule={<p><strong>If + S + V-ed/were, S + would + V</strong>. Điều không có thật ở hiện tại. be → WERE.</p>}
+          rule={<p><strong>ask + if/whether hoặc từ hỏi Wh- + S + V(lùi thì)</strong>. Không đảo ngữ.</p>}
           examples={[
-            { correct: "If I were rich, I would build a space museum.", explain: "Were (không dùng was) + would + V." },
+            { correct: "She asked if I liked robots.", explain: "Yes/No questions." },
+            { correct: "He asked where I went.", explain: "Wh- questions." }
           ]}
         />
       </div>
